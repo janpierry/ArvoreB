@@ -3,12 +3,12 @@ import java.util.Vector;
 
 public class No {
 
-    private int n; //Atributo que guarda a quantidade de chaves no nó
-    private Vector<Integer> chave; //vetor das chaves
-    private Vector<No> filho;//vetor dos filhos
-    private boolean folha;//Atributo que indica se a nó eh folha ou nao
-    private int X;//Atributo que guarda a posicao X onde o Nó deve aparecer na tela
-    private int Y;//Atributo que guarda a posicao Y onde o Nó deve aparecer na tela
+    private int n;
+    private Vector<Integer> chave; 
+    private Vector<No> filho;
+    private boolean folha;
+    private int X;
+    private int Y;
     private int larguraFilho;            
     final int DIFERENCA_ALTURA = 30;
     final int DIFERENCA_IRMAOS = 5;
@@ -90,7 +90,6 @@ public class No {
         }
         if (!folha) {
             X = (larguraFilho / 2) + x;
-            //X = x - (larguraFilho / 2);
             int xAcumuladoLocal = x;
             for (int i = 0; i < n + 1; i++) {
                 filho.get(i).updateCoordenates(this, xAcumuladoLocal);
